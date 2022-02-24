@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="./main/index.browser.js"></script>
+  <style src="./main/index.browser.css"></style>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+<script>
+  const App = {
+    template: `<FButton primary="true" label="test"/>`
+  }
+
+  console.log(fpcVueComponent);
+  console.log(Vue);
+  const app = Vue.createApp(App)
+  app.component('FButton',fpcVueComponent.Button)
+  app.mount('#app')
+</script>
+</html>
