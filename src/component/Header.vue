@@ -47,3 +47,6 @@ export default {
   emits: ['login', 'logout', 'createAccount'],
 };
 </script>
+<style lang="scss" scoped>
+
+</style>

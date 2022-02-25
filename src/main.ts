@@ -1,13 +1,14 @@
-// import { createApp } from "vue";
-// import App from "./App.vue";
-// import router from "./router";
-// import store from "./store";
+import { Button } from "./packages/Button";
 
-// createApp(App).use(store).use(router).mount("#app");
+const components = [Button];
 
+const install = (app: any, opts = {}) => {
+  components.forEach((component) => {
+    app.use(component);
+  });
+};
+const fpc = { install };
 
-export {default as Button} from './stories/Button.vue'
-export {default as Header} from './stories/Header.vue'
-export {default as Page} from './stories/Page.vue'
+export { Button };
 
-
+export default fpc;

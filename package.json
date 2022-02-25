@@ -1,9 +1,10 @@
 {
   "name": "hongxuli-test-vue",
-  "version": "0.4.0",
-  "main": "./main/index.cjs.js",
-  "browser": "./main/index.browser.js",
-  "module": "./main/index.es.js",
+  "version": "1.0.1",
+  "author": "Hongxu Li",
+  "main": "./lib/index.cjs.js",
+  "module": "./lib/index.es.js",
+  "style": "lib/styles/fpc-ui.css",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -12,13 +13,14 @@
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "r-build": "rollup -c"
+    "build-pack": "rollup -c build/rollup.config.js",
+    "build-components": "rollup -c build/rollup.components.js",
+    "build-theme": "gulp --gulpfile build/gen-style.js",
+    "build-lib": "npm run build-pack && npm run build-components && npm run build-theme"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
@@ -33,10 +35,8 @@
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-prettier": "^6.0.0",
@@ -46,11 +46,17 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
-    "node-sass": "^4.12.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-clean-css": "^4.3.0",
+    "node-sass": "^7.0.1",
     "prettier": "^2.2.1",
-    "rollup-plugin-terser": "^7.0.2",
+    "rollup": "^2.68.0",
     "rollup-plugin-postcss": "^3.1.8",
     "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
     "rollup-plugin-vue": "^6.0.0",
     "sass-loader": "^8.0.2",
@@ -59,8 +65,8 @@
     "vue-loader": "^16.8.3",
     "vue-template-compiler": "^2.6.14"
   },
-  "peerDependencies": {
-
-  },
-  "files": ["main","README.md"]
+  "files": [
+    "lib",
+    "README.md"
+  ]
 }
