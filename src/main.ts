@@ -1,4 +1,5 @@
 import { Button } from "./packages/Button";
+import { Header } from "./packages/Header";
 
 const components = [Button];
 
@@ -9,6 +10,6 @@ const install = (app: any, opts = {}) => {
 };
 const fpc = { install };
 
-export { Button };
+export { Button, Header };
 
 export default fpc;

@@ -1,3 +1,4 @@
 {
-  "button": "packages/Button/index.ts"
+  "button": "packages/Button/index.ts",
+  "header": "packages/Header/index.ts"
 }
