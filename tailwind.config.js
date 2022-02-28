@@ -1,7 +1,7 @@
-// module.exports = {
-//   content: [],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
+module.exports = {
+  content: ["./src/**/*.{html,js,vue}"], // Make sure 'vue' is added here since this is a Vue project
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};

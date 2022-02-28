@@ -1,7 +1,7 @@
 <template>
   <header>
-    <div class="flex">
-      <div>
+    <div  class="text-sky-500">
+      <div class="flex">
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" fill-rule="evenodd">
             <path d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z" fill="#FFF" />
@@ -9,7 +9,7 @@
             <path d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z" fill="#91BAF8" />
           </g>
         </svg>
-        <h1>Acme</h1>
+        <h1 class="bg-red-600">Acme</h1>
         <DxButton text="123" />
       </div>
       <div>
@@ -38,4 +38,7 @@ export default {
   emits: ["login", "logout", "createAccount"],
 };
 </script>
-<style lang="scss" scoped></style>
+<style >
+
+
+</style>
